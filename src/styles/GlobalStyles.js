@@ -2,6 +2,11 @@ import { createGlobalStyle } from "styled-components"
 import { screenConst } from "../utils/styleConst"
 
 export default createGlobalStyle`
+
+   @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+
    html {
       box-sizing:border-box;
       font-size:10px;
@@ -28,6 +33,15 @@ export default createGlobalStyle`
       width:100%;
       max-width:${screenConst.bigMax};
       margin:0 auto;
+
+      @media (${screenConst.bigMin}){
+         padding-left:7.2rem;
+         max-width:${screenConst.bigMax}
+      }
+
+      @media (${screenConst.lapMin}){
+         max-width:${screenConst.lapMax};
+      }
    }
 
    .fw {
@@ -50,11 +64,14 @@ export default createGlobalStyle`
       letter-spacing:0.2rem;
       line-height:160%;
       text-transform:uppercase;
+      font-family: 'Work Sans', sans-serif;
    }
 
    .h1 {
       font-size: 3rem;
       line-height:120%;
+      font-family: 'Work Sans', sans-serif;
+      font-weight:bold;
    }
 
    .h2 {
@@ -62,12 +79,47 @@ export default createGlobalStyle`
       font-weight:normal;
    }
 
+   .wS {
+      font-family: 'Work Sans', sans-serif;
+      :hover {
+         font-family: 'Libre Baskerville', serif;
+         font-style:italic;
+      }
+   }
+
    .italic {
       font-style:italic;
+      font-weight:normal;
+      font-family: 'Libre Baskerville', serif;
    }
 
    .h3 {
       font-size:2rem;
+      font-family: 'Work Sans', sans-serif;
+   }
+
+   .h4 {
+      font-family: 'Libre Baskerville', serif;
+font-style:italic;
+   }
+
+   .body {
+      font-family: 'Heebo', sans-serif;
+   }
+
+   .captions {
+      font-family: 'Heebo', sans-serif;
+
+   }
+
+   .menu {
+      font-family: 'Work Sans', sans-serif;
+      font-size:1.4rem;
+   }
+
+   .links {
+      font-family: 'Work Sans', sans-serif;
+      font-style:bold;
    }
 
 

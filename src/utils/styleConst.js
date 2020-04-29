@@ -1,5 +1,5 @@
 export const screenConst = {
-  bigMin: `min-width:1200px`,
+  bigMin: `max-width:1200px`,
   bigMax: `936px`,
   lapMin: `max-width: 900px`,
   lapMax: `840px`,

@@ -42,7 +42,7 @@ const IndexPage = () => (
       {MockData.map(el => (
         <Project key={el.title} className="projectFont">
           <>
-            <h2>{el.title}</h2>
+            <h2 className="wS">{el.title}</h2>
             <p className="sections">{el.type}</p>
             {/* <div className="italic">
               <h3>{el.title}</h3>
@@ -84,7 +84,7 @@ const Project = styled.article`
 
   :hover {
     h2 {
-      font-style: italic;
+      /* font-style: italic; */
     }
     p {
       visibility: visible;

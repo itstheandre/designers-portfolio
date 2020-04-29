@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { screenConst } from "../utils/styleConst"
 
 const Footer = () => {
   return (
@@ -33,12 +34,23 @@ const FooterStyle = styled.footer`
     justify-content: space-between;
     height: 100%;
 
+    .h3 {
+      font-weight: bold;
+    }
+
+    @media (${screenConst.lapMin}) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     .contactLinks {
       list-style-type: none;
       display: grid;
       align-items: center;
       grid-template-columns: repeat(3, auto);
       grid-gap: 3.2rem;
+
       li {
         font-size: 1.4rem;
       }
