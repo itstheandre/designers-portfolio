@@ -34,13 +34,13 @@ const IndexPage = () => (
         <div className="sections">Home</div>
         <h1 className="h1">
           I’m a communication designer that loves to help brands deliver the{" "}
-          <span className="h2">right message</span>
+          <span className="h2 italic">right message</span>
         </h1>
       </header>
     </IndexBlock>
     <ProjectSection>
       {MockData.map(el => (
-        <Project className="projectFont">
+        <Project key={el.title} className="projectFont">
           <>
             <h2>{el.title}</h2>
             <p className="sections">{el.type}</p>

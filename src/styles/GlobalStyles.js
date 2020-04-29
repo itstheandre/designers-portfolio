@@ -26,6 +26,8 @@ export default createGlobalStyle`
 
    .innerFw {
       width:100%;
+      max-width:${screenConst.bigMax};
+      margin:0 auto;
    }
 
    .fw {
@@ -56,9 +58,16 @@ export default createGlobalStyle`
    }
 
    .h2 {
-      font-style: italic;
       font-size: 3rem;
       font-weight:normal;
+   }
+
+   .italic {
+      font-style:italic;
+   }
+
+   .h3 {
+      font-size:2rem;
    }
 
 
