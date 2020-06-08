@@ -1,29 +1,74 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import { screenConst } from "../../utils/styleConst"
 import { Link } from "gatsby"
+import { menu } from "../../styles/GlobalStyles"
+
+const NavBar = styled.nav`
+  height: 4.8rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3.2rem;
+
+    @media (max-width: 899px) {
+      display: none;
+    }
+
+    a {
+      color: var(--blue);
+    }
+  }
+
+  @media (max-width: 899px) {
+    height: 3.6rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    line-height: 135.96%;
+    font-weight: bold;
+
+    a {
+      color: var(--blue);
+    }
+
+    @media (max-width: 899px) {
+      font-size: 1.6rem;
+    }
+  }
+`
 
 const Nav = () => {
-  const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = React.useState(false)
   return (
-    <NavBar className="fw">
-      <h2 className="name">Catarina Rosa</h2>
-      <div className="menu-links">
-        <ul>
-          <Link to="/work">
-            <li>Work</li>
-          </Link>
-          <Link to="/about">
-            <li>About me</li>
-          </Link>
-        </ul>
-        <Burger open={open} onClick={() => setOpen(!open)}>
-          <div />
-          <div />
-          <div />
-        </Burger>
+    <NavBar className="heroW">
+      <div className="name wS">
+        <Link to="/">Catarina Rosa</Link>
       </div>
+      <ul>
+        <li>
+          <Link className={menu} to="/work">
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link className={menu} to="/about">
+            About me
+          </Link>
+        </li>
+      </ul>
+      <Burger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </Burger>
     </NavBar>
   )
 }
@@ -42,7 +87,7 @@ const Burger = styled.button`
   z-index: 10;
   display: none;
 
-  @media (${screenConst.lapMin}) {
+  @media (max-width:899px) {
     display: flex;
     /* display: block; */
   }
@@ -73,39 +118,3 @@ const Burger = styled.button`
 `
 
 export default Nav
-
-const NavBar = styled.nav`
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  ul {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 3.2rem;
-
-    @media (${screenConst.lapMin}) {
-      display: none;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 1.4rem;
-      color: var(--blue);
-    }
-    li {
-    }
-  }
-
-  @media (${screenConst.tabMin}) {
-    height: 36px;
-  }
-
-  .name {
-    font-size: 2rem;
-    line-height: 135.96%;
-    color: var(--blue);
-  }
-`

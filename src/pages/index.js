@@ -27,31 +27,42 @@ const MockData = [
 ]
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <IndexBlock className="fw">
-      <header>
-        <div className="sections">Home</div>
-        <h1 className="h1">
-          I’m a communication designer that loves to help brands deliver the{" "}
-          <span className="h2 italic">right message</span>
-        </h1>
-      </header>
-    </IndexBlock>
-    <ProjectSection>
-      {MockData.map(el => (
-        <Project key={el.title} className="projectFont">
-          <>
-            <h2>{el.title}</h2>
-            <p className="sections">{el.type}</p>
-            {/* <div className="italic">
-              <h3>{el.title}</h3>
-            </div> */}
-          </>
-        </Project>
-      ))}
-    </ProjectSection>
-  </Layout>
+  <div className="heroW hero" style={{ backgroundColor: "var(--lightBlue)" }}>
+    <div
+      className="xtContainer "
+      style={{ height: "100%", background: "yellow" }}
+    >
+      <div
+        className="inContainer"
+        style={{ height: "100%", background: "orange" }}
+      ></div>
+    </div>
+  </div>
+  // <Layout>
+  //   <SEO title="Home" />
+  //   <IndexBlock className="hero">
+  //     <header>
+  //       <div className="sections wS">Home</div>
+  //       <h1 className="h1">
+  //         I’m a communication designer that loves to help brands deliver the{" "}
+  //         <span className="h2 italic">right message</span>
+  //       </h1>
+  //     </header>
+  //   </IndexBlock>
+  //   <ProjectSection>
+  //     {MockData.map(el => (
+  //       <Project key={el.title} className="projectFont">
+  //         <>
+  //           <h2>{el.title}</h2>
+  //           <p className="sections">{el.type}</p>
+  //           {/* <div className="italic">
+  //             <h3>{el.title}</h3>
+  //           </div> */}
+  //         </>
+  //       </Project>
+  //     ))}
+  //   </ProjectSection>
+  // </Layout>
 )
 
 export default IndexPage

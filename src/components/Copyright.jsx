@@ -1,25 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import { screenConst } from "../utils/styleConst"
+import { captions } from "../styles/GlobalStyles"
 
-const Copyright = () => {
-  return (
-    <CopyrightStyle>
-      &copy; Catarina Rosa de Albuquerque and André de Albuquerque | 2020
-    </CopyrightStyle>
-  )
-}
+const Copyright = () => (
+  <CopyRightStyles className={captions}>
+    &copy; Catarina Rosa de Albuquerque and André de Albuquerque | 2020
+  </CopyRightStyles>
+)
+
+const CopyRightStyles = styled.div`
+  text-align: center;
+  margin-block-end: 2.4rem;
+`
 
 export default Copyright
-
-const CopyrightStyle = styled.div`
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 150%;
-  color: var(--grey);
-  margin-bottom: 2.4rem;
-
-  @media (${screenConst.lapMin}) {
-    font-size: 1rem;
-  }
-`
