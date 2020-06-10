@@ -15,10 +15,16 @@ const NavBar = styled.nav`
     list-style-type: none;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 3.2rem;
+    /* grid-gap: 3.2rem; */
 
     @media (max-width: 899px) {
       display: none;
+    }
+
+    li {
+      &:last-child {
+        text-align: right;
+      }
     }
 
     a {
@@ -53,11 +59,11 @@ const Nav = () => {
         <Link to="/">Catarina Rosa</Link>
       </div>
       <ul>
-        <li>
+        {/* <li>
           <Link className={menu} to="/work">
             Work
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link className={menu} to="/about">
             About me

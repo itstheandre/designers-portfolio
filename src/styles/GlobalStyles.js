@@ -162,6 +162,30 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration:none;
    }
 
+   .mAuto {
+      margin: 0 auto;
+   }
+
+   .colLightBlue {
+      color: var(--lightBlue);
+   }
+
+   .colWhite {
+      color:var(--white)
+   }
+
+   .bgLB {
+      background-color: var(--lightBlue)
+   }
+
+   .bgBlue {
+      background-color: var(--blue)
+   }
+
+   .colBlue {
+      color: var(--blue);
+   }
+
    .xtContainer {
       width: 100vw;
       margin: 0 auto;
@@ -190,6 +214,8 @@ export const GlobalStyle = createGlobalStyle`
          max-width: 80vw;
       }
    }
+
+
 
    .heroW {
       max-width: calc(100vw - ${48 * 2}px);
@@ -290,7 +316,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size:1.4rem;
       line-height:140%;
       text-decoration:none;
-      padding-inline: 1rem;
+      ${"" /* padding-inline: 1rem; */}
       &:hover {
          font-family: 'Libre Baskerville', serif;
          font-style:italic;
